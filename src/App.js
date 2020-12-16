@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
 function App() {
+  const books = [
+    {
+      title: '미라클모닝',
+      subTitle: '당신의 하루를 바꾸는 기적 아침 6분이면 충분하다',
+      image: 'http://image.kyobobook.co.kr/images/book/large/110/l9791157841110.jpg',
+      author: '할 엘로드'
+    }, {
+      title: '미라클모닝',
+      subTitle: '당신의 하루를 바꾸는 기적 아침 6분이면 충분하다',
+      image: 'http://image.kyobobook.co.kr/images/book/large/110/l9791157841110.jpg',
+      author: '할 엘로드'
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      { books.map(book => (      
+        <>   
+          <img src={ book.image } />
+          <h3>{ book.title }</h3>
+          <h4>{ book.subTitle }</h4>
+          <h5>{ book.author }지음</h5>
+        </>
+      ))}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
