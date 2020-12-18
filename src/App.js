@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+import Reading from './routes/Reading'
 
 function App() {
   const books = [
@@ -53,9 +54,7 @@ function App() {
           홈
           {bookList()}
         </Route>
-        <Route exact path="/reading">
-          읽고 있는 책
-        </Route>
+        <Route exact path="/reading" component={ Reading } />
         <Route exact path="/wishlist">
           읽고 싶은 책
         </Route>
